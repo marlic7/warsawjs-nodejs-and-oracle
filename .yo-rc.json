@@ -1,0 +1,10 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "Aplikacja backendowa w Node.js i z bazą danych Oracle",
+    "packageVersion": "1.0.0",
+    "useSass": true,
+    "deployToGithubPages": true,
+    "githubUsername": "marlic7",
+    "githubRepository": "warsawjs-nodejs-and-oracle"
+  }
+}

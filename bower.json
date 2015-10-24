@@ -1,0 +1,8 @@
+{
+  "name": "aplikacja-backendowa-w-node-js-i-z-baza-danych-oracle",
+  "version": "1.0.0",
+  "dependencies": {
+    "reveal.js": "~3.1.0",
+    "highlightjs": "~8.5.0"
+  }
+}
