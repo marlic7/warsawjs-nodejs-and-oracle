@@ -101,7 +101,7 @@ module.exports = (grunt) ->
                 message: 'Built from %sourceCommit% on branch %sourceBranch%'
             pages:
                 options:
-                    remote: 'git@github.com:marlic7/warsawjs-nodejs-and-oracle.git'
+                    remote: 'https://github.com/marlic7/warsawjs-nodejs-and-oracle.git'
                     branch: 'gh-pages'
         
 
