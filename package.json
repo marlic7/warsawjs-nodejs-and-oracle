@@ -1,5 +1,5 @@
 {
-  "name": "aplikacja-backendowa-w-node-js-i-z-baza-danych-oracle",
+  "name": "aplikacja-backendowa-w-node-js-z-baza-danych-oracle",
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
@@ -9,7 +9,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-jshint": "^0.11.2",
-    "load-grunt-tasks": "^3.2.0", 
+    "load-grunt-tasks": "^3.2.0",
     "grunt-build-control": "^0.5.0",
     "grunt-coffeelint": "0.0.13",
     "coffeelint": "^1.0.0"
@@ -19,6 +19,8 @@
     "npm": ">=1.3.7"
   },
   "scripts": {
-    "test": "grunt test"
+      "test": "grunt test",
+      "new": "yo reveal:slide",
+      "help": "echo \"npm run new SlideTitle -- --markdown --attributes --notes\""
   }
 }
