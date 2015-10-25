@@ -1,6 +1,9 @@
 [
     "start.html",
-    "o-mnie.html",
     "agenda.html",
+    [
+        "o-mnie.html",
+        "o-mnie-real-programmer.html"
+    ],
     "dlaczego-node-js.html"
 ]

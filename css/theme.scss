@@ -32,7 +32,8 @@ $headingFont: 'firalight', serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
-$linkColor: #51483D;
+//$linkColor: #51483D;
+$linkColor: #4b86c2;
 $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: #26351C;
 
@@ -43,6 +44,10 @@ $heading4Size: 1.0em;
 
 .reveal a {
   line-height: 1.3em;
+}
+
+.speaker-controls-notes .value {
+    font-size: 1.1em !important;
 }
 
 // Theme template ------------------------------
