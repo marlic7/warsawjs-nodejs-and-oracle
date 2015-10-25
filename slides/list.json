@@ -15,12 +15,12 @@
     ],
     [
         "proof-of-concept.html",
-        "proof-of-concept2.html"
-    ],
-    [
+        "proof-of-concept2.html",
         "oracle.html",
-        "oracle2.html"
+        "oracle2.html",
+        "proof-of-concept3.html"
     ],
+    "nowy-projekt.html",
     "sentencja.html",
     "linki.html"
 ]
