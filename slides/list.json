@@ -1,9 +1,26 @@
 [
     "start.html",
-    "agenda.html",
+    [
+        "agenda.html",
+        "agenda2.html"
+    ],
     [
         "o-mnie.html",
-        "o-mnie-real-programmer.html"
+        "o-mnie2.html",
+        "o-mnie-real-programmer.ht ml"
     ],
-    "dlaczego-node-js.html"
+    [
+        "dlaczego-node-js.html",
+        "dlaczego-node-js2.html"
+    ],
+    [
+        "proof-of-concept.html",
+        "proof-of-concept2.html"
+    ],
+    [
+        "oracle.html",
+        "oracle2.html"
+    ],
+    "sentencja.html",
+    "linki.html"
 ]
