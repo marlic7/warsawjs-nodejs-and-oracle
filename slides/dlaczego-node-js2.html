@@ -1,0 +1,30 @@
+<h2>dlaczego Node.js?</h2>
+<br>
+
+<ul>
+    <li class="fragment">asynchroniczny (nieblokujące I/O)</li>
+    <li class="fragment">event driven</li>
+    <li class="fragment">strumienie</li>
+    <li class="fragment">natywne moduły</li>
+    <li class="fragment">zawsze demon</li>
+    <li class="fragment">NPM</li>
+    <li class="fragment">JIT compiler (V8), Adaptive optimization, Inline expansion</li>
+    <li class="fragment">JavaScript</li>
+</ul>
+
+<aside class="notes">
+    <ol>
+        <li>jeden wątek z event loop + thread pool
+            obsługujący zlecone zadania I/O i rejestrujący wyniki w callback queue</li>
+        <li>można odpalić jakieś zdarzenie i wszystkie zarejestrowane
+            słuchacze (listenery) - funkcje callback zostaną wywołane
+            (oczywiście po przejściu event loopa i wg określonej kolejności)</li>
+        <li>operowanie na chunk-ach, mniejsza alokacja pamięci, niezwłoczne rozpoczęcie działań bez czekania na cały zbiór</li>
+        <li>kosztowne operacje można napisać w C++ (koszt przełączania kontekstu)</li>
+        <li>teoretycznie niepotrzebny serwer www, RAM: dane kontekstowe, biblioteki</li>
+        <li>kompletny przyjazny i bardzo podobny jak w Linux-ach (apt-get/dpkg czy yum/rpm)</li>
+        <li>bardzo wydajny, kompilacja do kodu maszynowego przed uruchomieniem (jak JAVA, Ruby) ale z pominięciem bytecodu,
+            PHP 7 (planowany JIT), AO i IE wydajność kosztem większegu zurzycia RAM</li>
+        <li>JavaScript Everywhere!</li>
+    </ol>
+</aside>
