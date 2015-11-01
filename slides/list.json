@@ -22,10 +22,13 @@
     ],
     [
         "nowy-projekt.html",
-        "sytuacja-z-driverami-po-pol-roku.html",
+        "architektura-nowego-systemu.html",
+        { "filename": "sytuacja-z-driverami-po-pol-roku.html",   "attr": { "data-transition": "none" } },
+        { "filename": "sytuacja-z-driverami-po-pol-roku-2.html", "attr": { "data-transition": "none" } },
+        { "filename": "sytuacja-z-driverami-po-pol-roku-3.html", "attr": { "data-transition": "none" } },
         "alternatywne-metody-noradle.html",
         "instalacja-driverow-natywnych.html"
     ],
-    "sentencja.html",
+    { "filename": "sentencja.html", "attr": { "data-transition": "zoom", "data-transition-speed": "slow" } },
     "linki.html"
 ]
