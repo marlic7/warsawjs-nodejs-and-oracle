@@ -1,21 +1,62 @@
 [
     "start.html",
     [
-        "agenda.html",
-        "agenda2.html"
+        {
+            "filename": "agenda.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "agenda2.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        }
     ],
     [
-        "o-mnie.html",
-        "o-mnie2.html",
+        {
+            "filename": "o-mnie.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "o-mnie2.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
         "o-mnie-real-programmer.html"
     ],
     [
-        "dlaczego-node-js.html",
-        "dlaczego-node-js2.html"
+        {
+            "filename": "dlaczego-node-js.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "dlaczego-node-js2.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        "dlaczego-node-js3.html"
     ],
     [
-        "proof-of-concept.html",
-        "proof-of-concept2.html",
+        {
+            "filename": "proof-of-concept.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "proof-of-concept2.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
         "oracle.html",
         "oracle2.html",
         "proof-of-concept3.html"
@@ -23,12 +64,37 @@
     [
         "nowy-projekt.html",
         "architektura-nowego-systemu.html",
-        { "filename": "sytuacja-z-driverami-po-pol-roku.html",   "attr": { "data-transition": "none" } },
-        { "filename": "sytuacja-z-driverami-po-pol-roku-2.html", "attr": { "data-transition": "none" } },
-        { "filename": "sytuacja-z-driverami-po-pol-roku-3.html", "attr": { "data-transition": "none" } },
-        "alternatywne-metody-noradle.html",
-        "instalacja-driverow-natywnych.html"
+        {
+            "filename": "sytuacja-z-driverami-po-pol-roku.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "sytuacja-z-driverami-po-pol-roku-2.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "sytuacja-z-driverami-po-pol-roku-3.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        "instalacja-driverow-natywnych.html",
+        "decyzja-o-wlasnej-abstrakcji.html"
     ],
-    { "filename": "sentencja.html", "attr": { "data-transition": "zoom", "data-transition-speed": "slow" } },
-    "linki.html"
+    "abstrakcja-node-dal.html",
+    "inne-abstrakcje.html",
+    "alternatywne-metody-noradle.html",
+    {
+        "filename": "sentencja.html",
+        "attr": {
+            "data-transition": "zoom",
+            "data-transition-speed": "slow"
+        }
+    },
+    "linki.html",
+    "strojenie-node-js.html"
 ]
