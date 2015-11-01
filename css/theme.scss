@@ -47,11 +47,22 @@ $heading4Size: 1.0em;
 }
 
 .speaker-controls-notes .value {
-    font-size: 1.1em !important;
+  font-size: 1.1em !important;
 }
 
 ul.linki {
   font-size: 0.7em;
+}
+
+// visjs
+.vis-item.driver-joe {
+  background-color: gold;
+  border-color: orange;
+}
+.vis-item.driver-ora {
+  background-color: magenta;
+  border-color: purple;
+  color: white;
 }
 
 // Theme template ------------------------------

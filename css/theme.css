@@ -24,6 +24,15 @@
 ul.linki {
   font-size: 0.7em; }
 
+.vis-item.driver-joe {
+  background-color: gold;
+  border-color: orange; }
+
+.vis-item.driver-ora {
+  background-color: magenta;
+  border-color: purple;
+  color: white; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/

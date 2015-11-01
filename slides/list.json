@@ -20,7 +20,12 @@
         "oracle2.html",
         "proof-of-concept3.html"
     ],
-    "nowy-projekt.html",
+    [
+        "nowy-projekt.html",
+        "sytuacja-z-driverami-po-pol-roku.html",
+        "alternatywne-metody-noradle.html",
+        "instalacja-driverow-natywnych.html"
+    ],
     "sentencja.html",
     "linki.html"
 ]
