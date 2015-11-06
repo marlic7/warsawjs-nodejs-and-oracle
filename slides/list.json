@@ -1,14 +1,14 @@
 [
-    "start.html",
+    "01a.start.html",
     [
         {
-            "filename": "agenda.html",
+            "filename": "01b.agenda.html",
             "attr": {
                 "data-transition": "none"
             }
         },
         {
-            "filename": "agenda2.html",
+            "filename": "01c.agenda2.html",
             "attr": {
                 "data-transition": "none"
             }
@@ -16,85 +16,87 @@
     ],
     [
         {
-            "filename": "o-mnie.html",
+            "filename": "02a.o-mnie.html",
             "attr": {
                 "data-transition": "none"
             }
         },
         {
-            "filename": "o-mnie2.html",
+            "filename": "02b.o-mnie2.html",
             "attr": {
                 "data-transition": "none"
             }
         },
-        "o-mnie-real-programmer.html"
+        "02c.o-mnie-real-programmer.html"
     ],
     [
         {
-            "filename": "dlaczego-node-js.html",
+            "filename": "03a.dlaczego-node-js.html",
             "attr": {
                 "data-transition": "none"
             }
         },
         {
-            "filename": "dlaczego-node-js2.html",
+            "filename": "03b.dlaczego-node-js2.html",
             "attr": {
                 "data-transition": "none"
             }
         },
-        "dlaczego-node-js3.html"
+        "03c.dlaczego-node-js3.html"
     ],
     [
         {
-            "filename": "proof-of-concept.html",
+            "filename": "04a.proof-of-concept.html",
             "attr": {
                 "data-transition": "none"
             }
         },
         {
-            "filename": "proof-of-concept2.html",
+            "filename": "04b.proof-of-concept2.html",
             "attr": {
                 "data-transition": "none"
             }
         },
-        "oracle.html",
-        "oracle2.html",
-        "proof-of-concept3.html"
+        "04c.oracle.html",
+        "04d.oracle2.html",
+        "04e.proof-of-concept3.html"
     ],
     [
-        "nowy-projekt.html",
-        "architektura-nowego-systemu.html",
+        "05a.nowy-projekt.html",
+        "05b.architektura-nowego-systemu.html",
         {
-            "filename": "sytuacja-z-driverami-po-pol-roku.html",
+            "filename": "05c.sytuacja-z-driverami-po-pol-roku.html",
             "attr": {
                 "data-transition": "none"
             }
         },
         {
-            "filename": "sytuacja-z-driverami-po-pol-roku-2.html",
+            "filename": "05d.sytuacja-z-driverami-po-pol-roku-2.html",
             "attr": {
                 "data-transition": "none"
             }
         },
         {
-            "filename": "sytuacja-z-driverami-po-pol-roku-3.html",
+            "filename": "05e.sytuacja-z-driverami-po-pol-roku-3.html",
             "attr": {
                 "data-transition": "none"
             }
         },
-        "instalacja-driverow-natywnych.html",
-        "decyzja-o-wlasnej-abstrakcji.html"
+        "05f.instalacja-driverow-natywnych.html"
     ],
-    "abstrakcja-node-dal.html",
-    "inne-abstrakcje.html",
-    "alternatywne-metody-noradle.html",
+    [
+        "06a.abstrakcja-node-dal.html",
+        "06b.decyzja-o-wlasnej-abstrakcji.html"
+    ],
+    "07a.inne-abstrakcje.html",
+    "08a.alternatywne-metody-noradle.html",
+    "09a.strojenie-node-js.html",
     {
-        "filename": "sentencja.html",
+        "filename": "90.sentencja.html",
         "attr": {
             "data-transition": "zoom",
             "data-transition-speed": "slow"
         }
     },
-    "linki.html",
-    "strojenie-node-js.html"
+    "99.linki.html"
 ]
