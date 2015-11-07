@@ -87,7 +87,11 @@ module.exports = (grunt) ->
                     dest: 'dist/'
                 },{
                     expand: true
-                    src: ['index.html']
+                    src: [
+                        'index.html',
+                        'vis-architektura-nowego-projektu.html',
+                        'vis-drivery.html'
+                    ]
                     dest: 'dist/'
                     filter: 'isFile'
                 }]
