@@ -63,7 +63,9 @@
     ],
     [
         "05a.nowy-projekt.html",
-        "05b.architektura-nowego-systemu.html",
+        "05b.architektura-nowego-systemu.html"
+    ],
+    [
         {
             "filename": "05c.sytuacja-z-driverami-po-pol-roku.html",
             "attr": {
@@ -82,7 +84,8 @@
                 "data-transition": "none"
             }
         },
-        "05f.instalacja-driverow-natywnych.html"
+        "05f.instalacja-driverow-natywnych.html",
+        "05g.oracledb_z_node_4.html"
     ],
     [
         "06a.abstrakcja-node-dal.html",
