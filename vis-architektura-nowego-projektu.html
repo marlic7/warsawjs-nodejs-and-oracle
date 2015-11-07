@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Architektura nowego projektu</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link href="bower_components/vis/dist/vis.css" rel="stylesheet" type="text/css" />
+
+        <style>
+            div#vis-diagram {
+                width: 1200px;
+                height: 1024px;
+                margin: auto;
+            }
+        </style>
+
+        <script src="bower_components/vis/dist/vis.js"></script>
+    </head>
+
+    <body>
+        <div id="vis-diagram"></div>
+
+        <script>
+            var nodes = [],
+                edges = [],
+                container = document.getElementById('vis-diagram'),
+                data = {},
+                options = {},
+                network;
+
+            nodes.push({id: 1, label: 'Nginx',                           group: 'nginx',   value: 70,  x: 220, y: 120 });
+            nodes.push({id: 2, label: 'główny serwis\n(Node.js)',        group: 'serwis',  value: 20,  x: 320 });
+            nodes.push({id: 3, label: 'admin serwis\n(Node.js)',         group: 'serwis',  value: 20,  x: 320 });
+            nodes.push({id: 4, label: 'excel serwis\n(PHP lub Node.js)', group: 'serwis',  value: 20,  x: 320 });
+            nodes.push({id: 5, label: 'klient\nprzeglądarka',            group: 'klient',  value: 100, x: 0,   y: 100 });
+            nodes.push({id: 6, label: 'MongoDB',                         group: 'mongodb', value: 100, x: 450   });
+            nodes.push({id: 7, label: 'OracleDB',                        group: 'mongodb', value: 100, x: 450   });
+            nodes.push({id: 8, label: 'static\nfrontend',                group: 'statics', value: 20});
+
+            edges.push({from: 1, to: 2, length: 140, width: 1, label: 'http'});
+            edges.push({from: 1, to: 3, length: 140, width: 1, label: 'http'});
+            edges.push({from: 1, to: 8, length: 150, width: 1, label: 'file' });
+            edges.push({from: 2, to: 4, length: 140, width: 1, label: 'http'});
+            edges.push({from: 1, to: 5, length: 220, width: 1, label: 'https'});
+            edges.push({from: 2, to: 6, length: 250, width: 1, label: 'tcp/27018'});
+            edges.push({from: 2, to: 7, length: 300, width: 1, label: 'tcp/1521'});
+            edges.push({from: 3, to: 6, length: 300, width: 1, label: 'tcp/27018'});
+            edges.push({from: 3, to: 7, length: 250, width: 1, label: 'tcp/1521'});
+
+
+            data = {
+                nodes: nodes,
+                edges: edges
+            };
+
+            options = {
+                nodes: {
+                    scaling: {
+                        min: 16,
+                        max: 32
+                    }
+                },
+                edges: {
+                    color: 'gray',
+                    smooth: false
+                },
+                physics:{
+//                    barnesHut: { gravitationalConstant: -30000 },
+//                    stabilization: { iterations:2500 }
+                },
+                groups: {
+                    'nginx': {
+                        shape: 'triangle',
+                        color: '#FF9900' // orange
+                    },
+                    serwis: {
+                        shape: 'dot',
+                        color: "#2B7CE9" // blue
+                    },
+                    mongodb: {
+                        shape: 'database',
+                        color: "#99FF00" // green
+                    },
+                    klient: {
+                        shape: 'box',
+                        color: "#FF6600" // red
+                    },
+                    statics: {
+                        shape: 'square',
+                        color: "#109618" // green
+                    }
+                }
+            };
+
+            // create diagram
+            network = new vis.Network(container, data, options);
+        </script>
+
+    </body>
+
+</html>
