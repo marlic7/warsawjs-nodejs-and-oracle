@@ -24,6 +24,15 @@
 ul.linki {
   font-size: 0.7em; }
 
+.vis-item.driver-joe {
+  background-color: gold;
+  border-color: orange; }
+
+.vis-item.driver-ora {
+  background-color: magenta;
+  border-color: purple;
+  color: white; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -159,9 +168,7 @@ body {
   padding: 5px;
   overflow: auto;
   max-height: 400px;
-  word-wrap: normal;
-  background: #3F3F3F;
-  color: #DCDCDC; }
+  word-wrap: normal; }
 
 .reveal table {
   margin: auto;

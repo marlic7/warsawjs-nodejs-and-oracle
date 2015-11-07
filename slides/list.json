@@ -1,26 +1,105 @@
 [
-    "start.html",
+    "01a.start.html",
     [
-        "agenda.html",
-        "agenda2.html"
+        {
+            "filename": "01b.agenda.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "01c.agenda2.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        }
     ],
     [
-        "o-mnie.html",
-        "o-mnie2.html",
-        "o-mnie-real-programmer.html"
+        {
+            "filename": "02a.o-mnie.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "02b.o-mnie2.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        "02c.o-mnie-real-programmer.html"
     ],
     [
-        "dlaczego-node-js.html",
-        "dlaczego-node-js2.html"
+        {
+            "filename": "03a.dlaczego-node-js.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "03b.dlaczego-node-js2.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        "03c.dlaczego-node-js3.html"
     ],
     [
-        "proof-of-concept.html",
-        "proof-of-concept2.html",
-        "oracle.html",
-        "oracle2.html",
-        "proof-of-concept3.html"
+        {
+            "filename": "04a.proof-of-concept.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "04b.proof-of-concept2.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        "04c.oracle.html",
+        "04d.oracle2.html",
+        "04e.proof-of-concept3.html"
     ],
-    "nowy-projekt.html",
-    "sentencja.html",
-    "linki.html"
+    [
+        "05a.nowy-projekt.html",
+        "05b.architektura-nowego-systemu.html"
+    ],
+    [
+        {
+            "filename": "05c.sytuacja-z-driverami-po-pol-roku.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "05d.sytuacja-z-driverami-po-pol-roku-2.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "05e.sytuacja-z-driverami-po-pol-roku-3.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        "05f.instalacja-driverow-natywnych.html",
+        "05g.oracledb_z_node_4.html"
+    ],
+    [
+        "06a.abstrakcja-node-dal.html",
+        "06b.decyzja-o-wlasnej-abstrakcji.html"
+    ],
+    "07a.inne-abstrakcje.html",
+    "08a.alternatywne-metody-noradle.html",
+    "09a.strojenie-node-js.html",
+    {
+        "filename": "90.sentencja.html",
+        "attr": {
+            "data-transition": "zoom",
+            "data-transition-speed": "slow"
+        }
+    },
+    "99.linki.html"
 ]
