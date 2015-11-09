@@ -1,0 +1,37 @@
+<h4>Przykład 1a. Pobranie pojedynczej wartości (oracledb)</h4>
+
+<pre><code class="javascript" style="font-size: 0.9em">pool.getConnection(function(err, connection) {
+    if (err) {
+        cb(new Error(err));
+        return;
+    }
+    connection.execute('SELECT SYSDATE FROM DUAL',
+                       [],
+                       function(err, result) {
+        if (err) {
+            cb(new Error(err));
+            connection.release(function(err) {
+                if (err) {
+                    cb(new Error(err), {only_log: true});
+                    return;
+                }
+            });
+            return;
+        }
+
+        connection.release(function(err) {
+            if (err) {
+                cb(new Error(err));
+                return;
+            }
+
+            cb(null, result.rows[0][0]);
+        });
+    });
+});</code></pre>
+
+<aside class="notes"><pre>
+    1. pobranie połączenia z póli (j. błąd to cb i return)
+    2. wywołanie SQL (j. błąd to cb, zwolnienie połączenia do póli (z obsługą błędu) i return)
+    3. zwolnienie połączenia do póli i przekazanie wyniku zapytania do głównego cb
+</pre></aside>

@@ -1,0 +1,35 @@
+<h4>Przykład 2b. Pobranie wielu wierszy (oracledb)</h4>
+
+<pre><code class="javascript" style="font-size: 0.9em">var oracledb = require('oracledb');
+oracledb.prefetchRows = 100; // (wartość domyślna)</code></pre>
+
+<pre><code class="javascript" style="font-size: 0.9em">connection.execute("SELECT * FROM employees", [],
+                   { resultSet: true, prefetchRows: 200 },
+                   function(err, result) {
+    var allRows = [];
+
+    function fetch() {
+        var max = 200;
+        result.resultSet.getRows(max, function(err, rows) {
+            allRows = allRows.concat(rows);
+            if (rows.length === max) {
+                fetch();
+            } else {
+                result.resultSet.close(function(err) {
+                    connection.release(function(err) {
+                        cb(null, allRows);
+                    });
+                });
+            }
+        });
+    }
+    fetch();
+});</code></pre>
+
+<aside class="notes">
+    resultSet - używać gdy nie wiemy ile wierszy może być zwrócone, albo wiemy ale
+    może się to zmieniać w czasie. Używać gdy potrzeba pobrać dużą liczbę wierszy.
+    Wtedy optymalnie jest wykorzystać przetwarzanie strumieniowe.<br><br>
+    przykład: fetch 200 wierszy, preparacja wyjścia csv i flush chunk-a do CSV<br>
+    można też bez strumieni, jeżeli wierszy nie ma bardzo dużo i chcemy po prostu pobrać wszystkie (next slide)
+</aside>

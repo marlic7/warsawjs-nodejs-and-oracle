@@ -63,7 +63,8 @@
     ],
     [
         "05a.nowy-projekt.html",
-        "05b.architektura-nowego-systemu.html"
+        "05b.architektura-nowego-systemu.html",
+        "05c.nowy-projekt-wynik.html"
     ],
     [
         {
@@ -89,7 +90,12 @@
     ],
     [
         "06a.abstrakcja-node-dal.html",
-        "06b.decyzja-o-wlasnej-abstrakcji.html"
+        "06b.decyzja-o-wlasnej-abstrakcji.html",
+        "06c-przyklad.html",
+        "06d-przyklad.html",
+        "06e-przyklad-result-set.html",
+        "06f-przyklad-result-set.html",
+        "06g-przyklad-result-set-node-dal.html"
     ],
     "07a.inne-abstrakcje.html",
     "08a.alternatywne-metody-noradle.html",

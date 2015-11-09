@@ -1,0 +1,5 @@
+przykłady node-dal:
+
+1) selectOneValue
+2) kolejka na póli
+3) result set
