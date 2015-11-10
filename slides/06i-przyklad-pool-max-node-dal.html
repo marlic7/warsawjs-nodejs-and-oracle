@@ -1,0 +1,42 @@
+<h4>Przykład 3b. Przekroczenie póli (node-dal)</h4>
+
+<pre><code class="javascript" style="font-size: 0.9em">var async      = require('async'),
+    dalFactory = require('node-dal'),
+    cfg        = {
+        connection: {
+            user:           "testy",
+            password:       "testy123",
+            connectString:  "localhost/XE",
+            poolMax:        10,
+            poolMin:        1
+        },
+        getConnMaxProbes:   100, // times
+        getConnWaitMinTime: 200, // miliseconds
+        getConnWaitMaxTime: 500  // miliseconds
+    },
+    sqls = [],
+    i    = 15;
+
+while(i--) { sqls.push('SELECT SYSDATE FROM DUAL'); }
+
+dalFactory('oracledb', cfg, function(err, dal) {
+    var executeSql = function(sql, cb) {
+        dal.selectOneValueSql(sql, [], function(err, result) {
+            cb(null, result);
+        });
+    };
+
+    async.map(sqls, executeSql, function(err, results) {
+        callback(null, results);
+    });
+});</code></pre>
+
+<p class="fragment"  style="color: #008000;font-weight: bold">Wynik: [data1, data2, ... , data15]</p>
+
+
+<small style="color: red;font-weight: bold">przykłady bez obsługi błędów - dla przejrzystości</small>
+
+
+<aside class="notes">
+    brakuje tylko obsługi błędów, w tym przypadku nie trzeba zwracać połącenia do póli
+</aside>

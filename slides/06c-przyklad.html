@@ -13,7 +13,6 @@
             connection.release(function(err) {
                 if (err) {
                     cb(new Error(err), {only_log: true});
-                    return;
                 }
             });
             return;

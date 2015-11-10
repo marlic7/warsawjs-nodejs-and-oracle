@@ -3,3 +3,12 @@ przykłady node-dal:
 1) selectOneValue x
 2) kolejka na póli
 3) result set x
+
+This method obtains a connection from the connection pool.
+
+If a previously opened connection is available in the pool, that connection is returned.
+If all connections in the pool are in use, a new connection is created and returned to
+the caller, as long as the number of connections does not exceed the specified maximum
+for the pool. If the pool is at its maximum limit, the getConnection() call results in an error,
+ such as ORA-24418: Cannot open further sessions.
+

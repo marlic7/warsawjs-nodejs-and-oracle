@@ -1,0 +1,41 @@
+<h4>Przykład 3a. Przekroczenie póli (oracledb)</h4>
+
+<pre><code class="javascript" style="font-size: 0.9em">var async    = require('async'),
+    oracledb = require('oracledb'),
+    cfg  = {
+        user:           "username",
+        password:       "password",
+        connectString:  "localhost/XE",
+        poolMax:        10,
+        poolMin:        2
+    },
+    sqls = [],
+    i    = 15;
+
+while(i--) { sqls.push('SELECT SYSDATE FROM DUAL'); }
+
+oracledb.createPool(cfg, function(err, pool) {
+    var executeSql = function(sql, cb) {
+        pool.getConnection(function(err, connection) {
+            connection.execute(sql, [], function(err, results) {
+                cb(null, results.rows[0][0]);
+            });
+        });
+    };
+
+    async.map(sqls, executeSql, function(err, results) {
+        callback(null, results);
+    });
+});</code></pre>
+
+<p class="fragment"  style="color: red;font-weight: bold">Wynik: ORA-24418: Nie można otworzyć kolejnych sesji.</p>
+
+
+<small style="color: red;font-weight: bold">przykłady bez obsługi błędów oraz bez zwalniania połączenia do póli - dla przejrzystości</small>
+
+
+<aside class="notes">
+    Wbudowana póla w driver natywny oracledb nie posiada aktualnie mechanizmów kolejki.
+    Próba pobrania połączenia z póli w systuacji gdy wszystie połączenia pracują, kończy się
+    niepowodzeniem.
+</aside>

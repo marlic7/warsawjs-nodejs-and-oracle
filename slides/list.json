@@ -106,7 +106,9 @@
         "06d-przyklad.html",
         "06e-przyklad-result-set.html",
         "06f-przyklad-result-set.html",
-        "06g-przyklad-result-set-node-dal.html"
+        "06g-przyklad-result-set-node-dal.html",
+        "06h-przyklad-pool-max.html",
+        "06i-przyklad-pool-max-node-dal.html"
     ],
     "07a.inne-abstrakcje.html",
     "08a.alternatywne-metody-noradle.html",
