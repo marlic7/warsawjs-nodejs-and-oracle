@@ -1,18 +1,20 @@
 <h2>Alternatywne metody - Noradle</h2>
 
 <ul>
-    <li class="fragment">Noradle</li>
-    <li class="fragment">node_plsql</li>
+    <li>komunikacja bez driverów bazujących na OCI</li>
+    <li class="fragment">Node.js jako HTTP Gateway</li>
+    <li class="fragment">Oracle tworzy pólę połączeń TCP do Node.js (UTL_TCP)</li>
+    <li class="fragment">składowane w bazie procedury PL/SQL są uruchamiane jako servlety http</li>
+    <li class="fragment">cała logika manipulacji danymi znajduje się po stronie bazy danych</li>
+    <li class="fragment" style="color: #008000">brak zależności - tylko JavaScript i baza Oracle</li>
+    <li class="fragment" style="color: #ff0000">spora część dokumentacji po chińsku</li>
 </ul>
-
-<p>Please change me!</p>
 
 <aside class="notes">
     <ul>
         <li>http://docs.noradle.com/readme.html https://github.com/kaven276/noradle-demo</li>
-        <li>Noradle - ma niezaprzeczalną zaletę: tylko Node i Oracle (nic więcej) - wada: spora część dokumentacji po chińsku</li>
+        <li>Noradle - ma niezaprzeczalną zaletę: tylko Node i Oracle (nic więcej) -
+            wada: spora część dokumentacji po chińsku</li>
         <li>https://github.com/doberkofler/node_plsql</li>
-        <li>decyzja o własnej abstrakcji</li>
     </ul>
 </aside>
-

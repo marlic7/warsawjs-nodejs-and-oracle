@@ -111,7 +111,21 @@
         "06i-przyklad-pool-max-node-dal.html"
     ],
     "07a.inne-abstrakcje.html",
-    "08a.alternatywne-metody-noradle.html",
+    [
+        {
+            "filename": "08.alternatywne-metody.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        {
+            "filename": "08a.alternatywne-metody-noradle.html",
+            "attr": {
+                "data-transition": "none"
+            }
+        },
+        "08b.alternatywne-metody-node_plsql.html"
+    ],
     "09a.strojenie-node-js.html",
     {
         "filename": "90.sentencja.html",
@@ -120,5 +134,8 @@
             "data-transition-speed": "slow"
         }
     },
-    "99.linki.html"
+    [
+        "99.linki.html",
+        "98.dzieki.html"
+    ]
 ]
