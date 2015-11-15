@@ -9,7 +9,8 @@
         "pre{padding:0;margin:0;border:0;background:initial}";
 
     doc.addEventListener("DOMContentLoaded", function() {
-        var setNumbers = function() {
+        var setHighlightNumbers = function() {
+            console.log('setHighlightNumbers');
             var code = doc.getElementsByTagName("code");
             for (var i = 0; i < code.length; i++) {
                 var cod = code[i];
@@ -20,10 +21,10 @@
             }
         };
 
-        setTimeout(setNumbers, 1000);
-        setTimeout(setNumbers, 5000);
-        setTimeout(setNumbers, 15000);
-        setTimeout(setNumbers, 25000);
+        setTimeout(setHighlightNumbers, 1000);
+        setTimeout(setHighlightNumbers, 5000);
+        setTimeout(setHighlightNumbers, 15000);
+        setTimeout(setHighlightNumbers, 25000);
 
         //if (typeof jQuery != "undefined" && jQuery.fn.niceScroll) jQuery(".hljs").niceScroll()
     });
