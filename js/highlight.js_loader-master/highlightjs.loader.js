@@ -10,7 +10,7 @@
 
     doc.addEventListener("DOMContentLoaded", function() {
         //console.log('DOMContentLoaded before setTimeout');
-        setTimeout(function() {
+        //setTimeout(function() {
             var code = doc.getElementsByTagName("code");
             for (var i = 0; i < code.length; i++) {
                 var cod = code[i];
@@ -25,7 +25,7 @@
                 //    cod[innerHTML] = '<span class="hjln">' + lines + '</span>' + cod[innerHTML];
                 //}
             }
-        }, 3000);
+        //}, 3000);
         //if (typeof jQuery != "undefined" && jQuery.fn.niceScroll) jQuery(".hljs").niceScroll()
     });
 })(document, "replace", "innerHTML");
