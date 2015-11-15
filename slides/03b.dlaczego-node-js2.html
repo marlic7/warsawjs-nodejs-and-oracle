@@ -2,7 +2,7 @@
 <br>
 
 <ul>
-    <li>asynchroniczny (nieblokujące I/O)</li>
+    <li>asynchroniczny (nieblokujące I/O) = wydajność</li>
     <li class="fragment">event driven</li>
     <li class="fragment">strumienie</li>
     <li class="fragment">natywne moduły</li>
@@ -14,8 +14,7 @@
 
 <aside class="notes">
     <ol>
-        <li>jeden wątek z event loop + thread pool
-            obsługujący zlecone zadania I/O i rejestrujący wyniki w callback queue</li>
+        <li>potem</li>
         <li>można odpalić jakieś zdarzenie i wszystkie zarejestrowane
             słuchacze (listenery) - funkcje callback zostaną wywołane
             (oczywiście po przejściu event loopa i wg określonej kolejności)</li>
