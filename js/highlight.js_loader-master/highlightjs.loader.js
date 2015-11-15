@@ -9,23 +9,22 @@
         "pre{padding:0;margin:0;border:0;background:initial}";
 
     doc.addEventListener("DOMContentLoaded", function() {
-        //console.log('DOMContentLoaded before setTimeout');
-        setTimeout(function() {
+        var setNumbers = function() {
             var code = doc.getElementsByTagName("code");
             for (var i = 0; i < code.length; i++) {
                 var cod = code[i];
-                var lines = new Array(cod[innerHTML].split(/\n/).length + 1).join('<span></span>');
-                cod[innerHTML] = '<span class="hjln">' + lines + '</span>' + cod[innerHTML];
-                //if (cod.className.search(/(hljs|nohighlight)/) == -1) {
-                //    console.log('jest', cod);
-                //
-                //    cod[innerHTML] = cod[innerHTML][replace](/<br[^>]*>$/mgi, "")[replace](/</g, "&lt;")[replace](/>/g, "&gt;")[replace](/"/g, "&quot;");
-                //    hljs.highlightBlock(cod);
-                //    var lines = new Array(cod[innerHTML].split(/\n/).length + 1).join('<span></span>');
-                //    cod[innerHTML] = '<span class="hjln">' + lines + '</span>' + cod[innerHTML];
-                //}
+                if(!cod.querySelector('span.hjln')) {
+                    var lines = new Array(cod[innerHTML].split(/\n/).length + 1).join('<span></span>');
+                    cod[innerHTML] = '<span class="hjln">' + lines + '</span>' + cod[innerHTML];
+                }
             }
-        }, 5000);
+        };
+
+        setTimeout(setNumbers, 1000);
+        setTimeout(setNumbers, 5000);
+        setTimeout(setNumbers, 15000);
+        setTimeout(setNumbers, 25000);
+
         //if (typeof jQuery != "undefined" && jQuery.fn.niceScroll) jQuery(".hljs").niceScroll()
     });
 })(document, "replace", "innerHTML");
