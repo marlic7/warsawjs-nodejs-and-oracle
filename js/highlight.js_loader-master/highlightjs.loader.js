@@ -7,27 +7,25 @@
         ".hjln{border-right:.1em solid;counter-reset:l;cursor:default;float:left;margin:0 1em 0 -1em;text-align:right;-moz-user-select:none;-webkit-user-select:none}"+
         ".hjln span{counter-increment:l;display:block;padding:0 .5em 0 1em}.hjln span:before{content:counter(l)}"+
         "pre{padding:0;margin:0;border:0;background:initial}";
+
     doc.addEventListener("DOMContentLoaded", function() {
-        var code = doc.getElementsByTagName("code");
-        for (var i = 0; i < code.length; i++) {
-            var cod = code[i];
-            if (cod.className.search(/(hljs|nohighlight)/) == -1) {
-                //cod.addEventListener("click", function() {
-                //    if (confirm("Select All?")) {
-                //        var r = doc.createRange(),
-                //            s = window.getSelection();
-                //        s.removeAllRanges();
-                //        r.setStart(this, 1);
-                //        r.setEnd(this, this.childNodes.length);
-                //        s.addRange(r)
-                //    }
-                //});
-                cod[innerHTML] = cod[innerHTML][replace](/<br[^>]*>$/mgi, "")[replace](/</g, "&lt;")[replace](/>/g, "&gt;")[replace](/"/g, "&quot;");
-                hljs.highlightBlock(cod);
+        //console.log('DOMContentLoaded before setTimeout');
+        setTimeout(function() {
+            var code = doc.getElementsByTagName("code");
+            for (var i = 0; i < code.length; i++) {
+                var cod = code[i];
                 var lines = new Array(cod[innerHTML].split(/\n/).length + 1).join('<span></span>');
                 cod[innerHTML] = '<span class="hjln">' + lines + '</span>' + cod[innerHTML];
+                //if (cod.className.search(/(hljs|nohighlight)/) == -1) {
+                //    console.log('jest', cod);
+                //
+                //    cod[innerHTML] = cod[innerHTML][replace](/<br[^>]*>$/mgi, "")[replace](/</g, "&lt;")[replace](/>/g, "&gt;")[replace](/"/g, "&quot;");
+                //    hljs.highlightBlock(cod);
+                //    var lines = new Array(cod[innerHTML].split(/\n/).length + 1).join('<span></span>');
+                //    cod[innerHTML] = '<span class="hjln">' + lines + '</span>' + cod[innerHTML];
+                //}
             }
-        }
+        }, 3000);
         //if (typeof jQuery != "undefined" && jQuery.fn.niceScroll) jQuery(".hljs").niceScroll()
-    })
+    });
 })(document, "replace", "innerHTML");
