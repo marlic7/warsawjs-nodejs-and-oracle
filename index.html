@@ -17,20 +17,21 @@
 
 
         <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="bower_components/highlightjs/styles/github.css">
+        <!--<link rel="stylesheet" href="bower_components/highlightjs/styles/github.css">-->
+        <link rel="stylesheet" href="bower_components/highlightjs/styles/atelier-estuary.light.css">
 
         <!-- Printing and PDF exports -->
-        <script>
-            var link = document.createElement( 'link' );
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
-            document.getElementsByTagName( 'head' )[0].appendChild( link );
-        </script>
+        <!--<script>-->
+            <!--var link = document.createElement( 'link' );-->
+            <!--link.rel = 'stylesheet';-->
+            <!--link.type = 'text/css';-->
+            <!--link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';-->
+            <!--document.getElementsByTagName( 'head' )[0].appendChild( link );-->
+        <!--</script>-->
 
-        <!--[if lt IE 9]>
-        <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
-        <![endif]-->
+        <!--&lt;!&ndash;[if lt IE 9]>-->
+        <!--<script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>-->
+        <!--<![endif]&ndash;&gt;-->
     </head>
 
     <body>
@@ -146,12 +147,22 @@
                         <section>
                             
                                 
-    <section data-html="slides/05a.nowy-projekt.html"></section>
+    <section data-transition="none" data-html="slides/05a.nowy-projekt.html"></section>
+
+
+                            
+                                
+    <section data-transition="none" data-html="slides/05a.nowy-projekt2.html"></section>
 
 
                             
                                 
     <section data-html="slides/05b.architektura-nowego-systemu.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/05c.nowy-projekt-wynik.html"></section>
 
 
                             
@@ -204,6 +215,41 @@
 
 
                             
+                                
+    <section data-html="slides/06c-przyklad.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/06d-przyklad.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/06e-przyklad-result-set.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/06f-przyklad-result-set.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/06g-przyklad-result-set-node-dal.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/06h-przyklad-pool-max.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/06i-przyklad-pool-max-node-dal.html"></section>
+
+
+                            
                         </section>
                     
                 
@@ -216,11 +262,25 @@
                     
                 
                     
-                        
-    <section data-html="slides/08a.alternatywne-metody-noradle.html"></section>
-
-
                     
+                        <section>
+                            
+                                
+    <section data-transition="none" data-html="slides/08.alternatywne-metody.html"></section>
+
+
+                            
+                                
+    <section data-transition="none" data-html="slides/08a.alternatywne-metody-noradle.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/08b.alternatywne-metody-node_plsql.html"></section>
+
+
+                            
+                        </section>
                     
                 
                     
@@ -240,11 +300,20 @@
                     
                 
                     
-                        
+                    
+                        <section>
+                            
+                                
     <section data-html="slides/99.linki.html"></section>
 
 
-                    
+                            
+                                
+    <section data-html="slides/98.dzieki.html"></section>
+
+
+                            
+                        </section>
                     
                 
             </div>
@@ -267,13 +336,38 @@
 
             // Optional reveal.js plugins
             dependencies: [
-              { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-              { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-              { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-              { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-              { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
-              { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
-              { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
+                { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() {
+                    return !document.body.classList;
+                }},
+                { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() {
+                    return !!document.querySelector( '[data-markdown]' );
+                }},
+                { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() {
+                    return !!document.querySelector( '[data-markdown]' );
+                }},
+                {   src: 'bower_components/reveal.js/plugin/highlight/highlight.js',
+                    condition: function() {
+                        return !!document.querySelector( '[data-html]' )
+                            || !!document.querySelector( 'pre code' )
+                            || !!document.querySelector( '[data-markdown]' );
+                    },
+                    callback: function() {
+                        hljs.initHighlightingOnLoad();
+//                        console.log('hljs.initHighlightingOnLoad');
+                    }
+                },
+                {   src: 'js/highlight.js_loader-master/highlightjs.loader.js',
+                    condition: function() {
+                        return !!document.querySelector( '[data-html]' )
+                            || !!document.querySelector( 'pre code' )
+                            || !!document.querySelector( '[data-markdown]' );
+                    }
+                },
+                { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+                { src: 'js/loadhtmlslides.js', condition: function() {
+                    return !!document.querySelector( '[data-html]' );
+                }}
             ]
           });
 

@@ -289,3 +289,10 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #4b86c2; }
+
+.hljs .hjln {
+  color: #c0b51c; }
+
+span.hjln {
+  border-right: #c0b51c solid 1px;
+  margin-right: 8px; }

@@ -1,6 +1,14 @@
 <h2>Strojenie Node.js</h2>
 
-<p>Please change me!</p>
+<pre><code class="javascript" style="font-size: 0.9em">
+process.env.UV_THREADPOOL_SIZE = 4; // Node.js default value
+</code></pre>
+
+<div class="fragment">
+<pre><code class="javascript" style="font-size: 0.9em">
+process.env.UV_THREADPOOL_SIZE = 10;
+</code></pre>
+</div>
 
 <aside class="notes">
     thread pool i domyślne 4 wątki,

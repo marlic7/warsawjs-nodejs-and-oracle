@@ -1,0 +1,19 @@
+<h4>Przykład 2a. Pobranie wielu wierszy (oracledb)</h4>
+
+<pre><code class="javascript" style="font-size: 0.9em">var oracledb = require('oracledb');
+oracledb.maxRows = 100; // (wartość domyślna)</code></pre>
+
+<pre><code class="javascript" style="font-size: 0.9em">connection.execute("SELECT * FROM employees", [], { maxRows: 1000 },
+                   function(err, result) {
+    // result.rows.length <= 1000
+});</code></pre>
+
+
+
+<aside class="notes">
+    maxRows - maksymalna liczba wierszy pobieranych przez execute()
+    (gdy nie jest używany ResultSet). Wiersze powyżej tego limitu
+    nie są pobierane.<br><br>
+    globalne zwiększenie tego limitu powoduje większą alokację pamięci na
+    poziomie C++ dla każdego execute()
+</aside>

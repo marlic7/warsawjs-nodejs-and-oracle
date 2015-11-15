@@ -1,0 +1,24 @@
+<h4>Przykład 1b. Pobranie pojedynczej wartości (node-dal)</h4>
+
+<pre><code class="javascript" style="font-size: 0.9em">dal.selectOneValueSql('SELECT SYSDATE FROM DUAL', [],
+                      function(err, result) {
+    if(err) {
+        cb(new Error(err));
+        return;
+    }
+    cb(null, result);
+});</code></pre>
+<div class="fragment">
+<p>lub</p>
+<pre><code class="javascript" style="font-size: 0.9em">dal.selectOneValue('DUAL', 'SYSDATE', [], function(err, result) {
+    if(err) {
+        cb(new Error(err));
+        return;
+    }
+    cb(null, result);
+});</code></pre>
+</div>
+
+<aside class="notes">
+    w tej wersji pobieranie połączenia z póli i zwracanie jest transparentne
+</aside>
