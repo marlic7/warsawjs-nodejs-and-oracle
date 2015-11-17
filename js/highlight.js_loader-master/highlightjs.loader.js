@@ -8,18 +8,20 @@
         ".hjln span{counter-increment:l;display:block;padding:0 .5em 0 1em}.hjln span:before{content:counter(l)}"+
         "pre{padding:0;margin:0;border:0;background:initial}";
 
-    doc.addEventListener("DOMContentLoaded", function() {
-        var setHighlightNumbers = function() {
-            console.log('setHighlightNumbers');
-            var code = doc.getElementsByTagName("code");
-            for (var i = 0; i < code.length; i++) {
-                var cod = code[i];
-                if(!cod.querySelector('span.hjln')) {
-                    var lines = new Array(cod[innerHTML].split(/\n/).length + 1).join('<span></span>');
-                    cod[innerHTML] = '<span class="hjln">' + lines + '</span>' + cod[innerHTML];
-                }
+    var setHighlightNumbers = function() {
+        console.log('setHighlightNumbers');
+        var code = doc.getElementsByTagName("code");
+        for (var i = 0; i < code.length; i++) {
+            var cod = code[i];
+            if(!cod.querySelector('span.hjln')) {
+                var lines = new Array(cod[innerHTML].split(/\n/).length + 1).join('<span></span>');
+                cod[innerHTML] = '<span class="hjln">' + lines + '</span>' + cod[innerHTML];
             }
-        };
+        }
+    };
+
+    //doc.addEventListener("DOMContentLoaded", function() {
+        //console.log('DOMContentLoaded - hurra');
 
         setTimeout(setHighlightNumbers, 1000);
         setTimeout(setHighlightNumbers, 5000);
@@ -27,5 +29,5 @@
         setTimeout(setHighlightNumbers, 25000);
 
         //if (typeof jQuery != "undefined" && jQuery.fn.niceScroll) jQuery(".hljs").niceScroll()
-    });
+    //});
 })(document, "replace", "innerHTML");
